@@ -11,7 +11,7 @@ class Marvel extends Command
      *
      * @var string
      */
-    protected $signature = 'marvel {character : Name of the character} {type : Type of the data} {path : path to file}';
+    protected $signature = 'marvel {character : Name of the character} {type : Type of the data} {path? : path to file}';
 
     /**
      * The console command description.
@@ -38,5 +38,6 @@ class Marvel extends Command
     public function handle()
     {
         $this->info('invoked');
+        return array();
     }
 }

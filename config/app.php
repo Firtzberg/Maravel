@@ -178,6 +178,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         Someline\Rest\RestClientServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
@@ -228,6 +229,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'RestClient' => Someline\Rest\RestClient::class,
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
     ],
 
 ];

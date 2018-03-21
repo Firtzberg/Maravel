@@ -112,7 +112,7 @@ class MarvelTest extends TestCase
     	$exitCode = Artisan::call(self::COMMAND, $params);
 
     	// check exit code
-    	$this->assertEquals($exitCode, 1);
+    	$this->assertEquals(1, $exitCode);
 
     	// check that file ha not been created
         $this->assertFileNotExists($params['path']);
@@ -136,7 +136,7 @@ class MarvelTest extends TestCase
     	$exitCode = Artisan::call(self::COMMAND, $params);
 
     	// check exit code
-    	$this->assertEquals($exitCode, 2);
+    	$this->assertEquals(2, $exitCode);
 
     	// check that file ha not been created
         $this->assertFileNotExists($params['path']);
@@ -145,8 +145,8 @@ class MarvelTest extends TestCase
 	/**
 	 * Verifies that result of given data type and for character with given name is properly obtained and stored.
 	 *
-	 * @param type string
-	 * @param character string
+	 * @param string $type
+	 * @param string $character
 	 * @return void
 	 */
 	private function executeTypeTest($type, $character = 'spider-man')
@@ -162,7 +162,7 @@ class MarvelTest extends TestCase
     	$exitCode = Artisan::call(self::COMMAND, $params);
 
     	// check exit code
-    	$this->assertEquals($exitCode, 0);
+    	$this->assertEquals(0, $exitCode);
 
     	// check file exists
         $this->assertFileExists($params['path']);
